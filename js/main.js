@@ -1,4 +1,26 @@
-'use strict';
+
+let startBtn = document.getElementById('start'),
+    budgetValue = document.getElementsByClassName('budget-value')[0],
+    daybudgetValue = document.getElementsByClassName('daybudget-value')[0],
+    levelValue = document.getElementsByClassName('level-value')[0],
+    expensesValue = document.getElementsByClassName('expenses-value')[0],
+    optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+    incomeValue = document.getElementsByClassName('income-value')[0],
+    monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+    yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0],
+    expensesItemInput = document.querySelectorAll('.expenses-item'),
+    btnAccept1 = document.getElementsByTagName('button')[0],
+    btnAccept2 = document.getElementsByTagName('button')[1],
+    btnCalc = document.getElementsByTagName('button')[2],
+    inputOptExp = document.querySelectorAll('.optionalexpenses-item'),
+    inputOptInc = document.querySelector('#income'),
+    checkBoxSav = document.querySelector('#savings'),
+    sum = document.querySelector('#sum'),
+    percent = document.querySelector('#percent'),
+    yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+
 
 let money, time;
 
@@ -24,7 +46,7 @@ let appData = {
             let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
                 b = prompt("Во сколько обойдется?", "");
     
-            if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null && a != "" && b != "" && a.length < 50) {
+            if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null && a != "" && b != "" & a.length < 50) {
                 console.log("done");
                 appData.expenses[a] = b;
             } else {
@@ -61,7 +83,7 @@ let appData = {
             let a = prompt("Статья необязательных расходов?"),
                 b = prompt("Во сколько обойдется?", "");
     
-            if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null && a != "" && b != "" && a.length < 50) {
+            if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null && a != "" && b != "" & a.length < 50) {
                 console.log("done");
     
                 appData.optionalExpenses[a] = b;
@@ -96,3 +118,7 @@ let appData = {
 for (let key in appData) {
     console.log("Наша программа включает в себя данные: " + key + " - " + appData[key]);
 }
+
+
+
+
